@@ -444,7 +444,7 @@ function App() {
               para crecer contigo.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a href="mailto:demo@simplohub.com" className="button-primary">
+              <a href="mailto:suport@simplohub.com" className="button-primary">
                 Solicitar Demo
               </a>
               <a href="#schedule-app" className="button-secondary">
@@ -466,7 +466,7 @@ function App() {
               title="Productos"
               items={['Schedule App', 'CRM App', 'Inventory App', 'Analytics Hub']}
             />
-            <FooterColumn title="Contacto" items={['demo@simplohub.com', 'WhatsApp', 'LinkedIn', 'Instagram']} />
+            <FooterColumn title="Contacto" items={['suport@simplohub.com', 'WhatsApp', 'LinkedIn', 'Instagram']} />
             <FooterColumn title="Legal" items={['Privacidad', 'Terminos', 'Seguridad', 'Soporte']} />
           </div>
           <div className="mt-10 flex flex-col gap-3 border-t border-[color:var(--border-subtle)] pt-6 text-xs text-[color:var(--text-secondary)] sm:flex-row sm:items-center sm:justify-between">
