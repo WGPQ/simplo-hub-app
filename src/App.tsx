@@ -27,6 +27,37 @@ import {
 import { SectionHeading } from './components/landing/section-heading'
 
 type Theme = 'light' | 'dark'
+type FooterLinkItem = {
+  label: string
+  href: string
+  external?: boolean
+}
+
+const APP_SCHEDULE_URL = 'https://schedule.simpliohub.com/'
+const WHATSAPP_URL = 'https://wa.me/593997702533'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/simplo-hub-a01203415'
+const INSTAGRAM_URL = 'https://www.instagram.com/'
+
+const footerProductLinks: FooterLinkItem[] = [
+  { label: 'Schedule App', href: APP_SCHEDULE_URL, external: true },
+  { label: 'CRM App', href: '#ecosystem' },
+  { label: 'Inventory App', href: '#ecosystem' },
+  { label: 'Analytics Hub', href: '#ecosystem' },
+]
+
+const footerContactLinks: FooterLinkItem[] = [
+  { label: 'support@simpliohub.com', href: 'mailto:support@simpliohub.com', external: true },
+  { label: 'WhatsApp', href: WHATSAPP_URL, external: true },
+  { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
+  { label: 'Instagram', href: INSTAGRAM_URL, external: true },
+]
+
+const footerLegalLinks: FooterLinkItem[] = [
+  { label: 'Privacidad', href: '#privacy' },
+  { label: 'Terminos', href: '#terms' },
+  { label: 'Seguridad', href: '#security' },
+  { label: 'Soporte', href: '#support' },
+]
 
 const featureIcons = [SparklesIcon, BoltIcon, TrendingIcon, ShieldIcon]
 const scheduleIcons = [CalendarIcon, UsersIcon, MessageIcon, TrendingIcon]
@@ -444,13 +475,86 @@ function App() {
               para crecer contigo.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a href="mailto:suport@simplohub.com" className="button-primary">
+              <a href="mailto:support@simplohub.com" className="button-primary">
                 Solicitar Demo
               </a>
               <a href="#schedule-app" className="button-secondary">
                 Conocer Schedule App
               </a>
             </div>
+          </section>
+
+          <section className="grid gap-4 lg:grid-cols-2">
+            <article id="privacy" className="panel-shell px-6 py-10 sm:px-8">
+              <SectionHeading
+                eyebrow="Legal"
+                title="Privacidad"
+                description="App Schedule opera con datos en UTC, visualizacion segun timezone y controles razonables para proteger la operacion del negocio."
+              />
+              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
+                <p>
+                  Simplo Hub procesa la informacion necesaria para operar reservas, clientes,
+                  usuarios y recordatorios dentro del flujo normal del producto.
+                </p>
+                <p>
+                  Cada empresa usuaria es responsable de la legitimidad de los datos que carga en
+                  la plataforma y de su uso conforme a la normativa aplicable.
+                </p>
+              </div>
+            </article>
+
+            <article id="terms" className="panel-shell px-6 py-10 sm:px-8">
+              <SectionHeading
+                eyebrow="Legal"
+                title="Terminos"
+                description="El uso de App Schedule debe mantenerse dentro de fines licitos, operativos y compatibles con la gestion del negocio."
+              />
+              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
+                <p>
+                  Cada cuenta es responsable de sus credenciales, configuracion interna y uso
+                  adecuado de la plataforma por parte de su equipo.
+                </p>
+                <p>
+                  Simplo Hub puede actualizar funciones, reforzar seguridad o limitar acceso en
+                  casos de abuso, riesgo operativo o incumplimiento del uso permitido.
+                </p>
+              </div>
+            </article>
+
+            <article id="security" className="panel-shell px-6 py-10 sm:px-8">
+              <SectionHeading
+                eyebrow="Operacion"
+                title="Seguridad"
+                description="La plataforma busca consistencia entre datos, agenda e interfaz sin perder trazabilidad ni control de acceso."
+              />
+              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
+                <p>
+                  El producto usa una logica de almacenamiento en UTC y renderiza segun el timezone
+                  configurado para mantener coherencia entre base de datos y calendario.
+                </p>
+                <p>
+                  Tambien se aplican medidas razonables de autenticacion, separacion por empresa y
+                  proteccion de informacion sensible en el entorno de operacion.
+                </p>
+              </div>
+            </article>
+
+            <article id="support" className="panel-shell px-6 py-10 sm:px-8">
+              <SectionHeading
+                eyebrow="Contacto"
+                title="Soporte"
+                description="Los canales de contacto deben llevar rapido al usuario correcto sin esconder el siguiente paso."
+              />
+              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
+                <p>
+                  Puedes escribir a <a className="font-medium text-[color:var(--accent-2)]" href="mailto:support@simplohub.com">support@simplohub.com</a> o abrir una conversacion directa por <a className="font-medium text-[color:var(--accent-2)]" href={WHATSAPP_URL} rel="noreferrer" target="_blank">WhatsApp</a>.
+                </p>
+                <p>
+                  Para presencia institucional y novedades del producto tambien puedes visitar el
+                  perfil de <a className="font-medium text-[color:var(--accent-2)]" href={LINKEDIN_URL} rel="noreferrer" target="_blank">LinkedIn</a>.
+                </p>
+              </div>
+            </article>
           </section>
         </main>
 
@@ -464,10 +568,10 @@ function App() {
             </div>
             <FooterColumn
               title="Productos"
-              items={['Schedule App', 'CRM App', 'Inventory App', 'Analytics Hub']}
+              items={footerProductLinks}
             />
-            <FooterColumn title="Contacto" items={['suport@simplohub.com', 'WhatsApp', 'LinkedIn', 'Instagram']} />
-            <FooterColumn title="Legal" items={['Privacidad', 'Terminos', 'Seguridad', 'Soporte']} />
+            <FooterColumn title="Contacto" items={footerContactLinks} />
+            <FooterColumn title="Legal" items={footerLegalLinks} />
           </div>
           <div className="mt-10 flex flex-col gap-3 border-t border-[color:var(--border-subtle)] pt-6 text-xs text-[color:var(--text-secondary)] sm:flex-row sm:items-center sm:justify-between">
             <span>© 2024 Simplo Hub. All rights reserved.</span>
@@ -485,7 +589,7 @@ function App() {
 
 type FooterColumnProps = {
   title: string
-  items: string[]
+  items: FooterLinkItem[]
 }
 
 function FooterColumn({ title, items }: FooterColumnProps) {
@@ -496,9 +600,14 @@ function FooterColumn({ title, items }: FooterColumnProps) {
       </h3>
       <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-primary)]">
         {items.map((item) => (
-          <li key={item}>
-            <a href="#" className="transition hover:text-[color:var(--accent-2)]">
-              {item}
+          <li key={item.label}>
+            <a
+              href={item.href}
+              className="transition hover:text-[color:var(--accent-2)]"
+              rel={item.external ? 'noreferrer' : undefined}
+              target={item.external ? '_blank' : undefined}
+            >
+              {item.label}
             </a>
           </li>
         ))}
