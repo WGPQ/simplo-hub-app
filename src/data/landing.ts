@@ -97,7 +97,7 @@ export const industries = [
 export const testimonials = [
   {
     quote:
-      'Simplo Hub cambio por completo como gestionamos reservas pequenas. Las ausencias bajaron y ahora operamos con menos friccion.',
+      'Simplio Hub cambio por completo como gestionamos reservas pequenas. Las ausencias bajaron y ahora operamos con menos friccion.',
     author: 'Bera Martinez',
     role: 'Barber Owner',
   },

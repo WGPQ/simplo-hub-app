@@ -35,7 +35,7 @@ type FooterLinkItem = {
 
 const APP_SCHEDULE_URL = 'https://schedule.simpliohub.com/'
 const WHATSAPP_URL = 'https://wa.me/593997702533'
-const LINKEDIN_URL = 'https://www.linkedin.com/in/simplo-hub-a01203415'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/simplio-hub-a01203415'
 const INSTAGRAM_URL = 'https://www.instagram.com/'
 
 const footerProductLinks: FooterLinkItem[] = [
@@ -100,7 +100,7 @@ function App() {
         <header className="sticky top-0 z-40 border-b border-[color:var(--border-subtle)] bg-[color:var(--header-bg)] backdrop-blur-xl">
           <div className="mx-auto flex max-w-[1120px] items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
             <a href="#" className="text-sm font-semibold tracking-[-0.03em] text-[color:var(--text-primary)]">
-              Simplo Hub
+              Simplio Hub
             </a>
 
             <nav className="hidden items-center gap-7 md:flex">
@@ -136,7 +136,7 @@ function App() {
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[color:var(--text-secondary)] md:text-lg">
-                Simplo Hub desarrolla soluciones SaaS modernas para ayudar a empresas a crecer,
+                Simplio Hub desarrolla soluciones SaaS modernas para ayudar a empresas a crecer,
                 automatizar procesos y ofrecer mejores experiencias a sus clientes.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -154,7 +154,7 @@ function App() {
               <div className="hero-device__frame">
                 <img
                   src={heroImage}
-                  alt="Dashboard de Simplo Hub mostrando metricas, agenda y comportamiento del negocio."
+                  alt="Dashboard de Simplio Hub mostrando metricas, agenda y comportamiento del negocio."
                   className="h-full w-full rounded-[22px] object-cover opacity-90"
                 />
               </div>
@@ -169,7 +169,7 @@ function App() {
                   Nuestra vision es construir un ecosistema conectado para negocios reales.
                 </h2>
                 <p className="mt-5 max-w-lg text-base leading-7 text-[color:var(--text-secondary)]">
-                  Simplo Hub no busca ser una sola herramienta. Diseñamos una plataforma que
+                  Simplio Hub no busca ser una sola herramienta. Diseñamos una plataforma que
                   centraliza aplicaciones especializadas, comparte contexto entre equipos y ayuda
                   a digitalizar operaciones con menos complejidad.
                 </p>
@@ -257,7 +257,7 @@ function App() {
                 Potencia tu agenda con Schedule App
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] md:text-4xl">
-                El primer producto del ecosistema Simplo Hub.
+                El primer producto del ecosistema Simplio Hub.
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-[color:var(--text-secondary)]">
                 Diseñado para negocios que viven de sus citas y reservas. Desde la primera reserva
@@ -418,7 +418,7 @@ function App() {
               center
               eyebrow="Sectores"
               title="Diseñado para negocios que dependen de agendas, reservas y experiencias."
-              description="Simplo Hub se adapta a equipos de servicio, salud y bienestar que necesitan orden, velocidad y seguimiento."
+              description="Simplio Hub se adapta a equipos de servicio, salud y bienestar que necesitan orden, velocidad y seguimiento."
             />
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
@@ -475,7 +475,7 @@ function App() {
               para crecer contigo.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a href="mailto:support@simplohub.com" className="button-primary">
+              <a href="mailto:support@simpliohub.com" className="button-primary">
                 Solicitar Demo
               </a>
               <a href="#schedule-app" className="button-secondary">
@@ -493,7 +493,7 @@ function App() {
               />
               <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
                 <p>
-                  Simplo Hub procesa la informacion necesaria para operar reservas, clientes,
+                  Simplio Hub procesa la informacion necesaria para operar reservas, clientes,
                   usuarios y recordatorios dentro del flujo normal del producto.
                 </p>
                 <p>
@@ -515,7 +515,7 @@ function App() {
                   adecuado de la plataforma por parte de su equipo.
                 </p>
                 <p>
-                  Simplo Hub puede actualizar funciones, reforzar seguridad o limitar acceso en
+                  Simplio Hub puede actualizar funciones, reforzar seguridad o limitar acceso en
                   casos de abuso, riesgo operativo o incumplimiento del uso permitido.
                 </p>
               </div>
@@ -547,7 +547,7 @@ function App() {
               />
               <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
                 <p>
-                  Puedes escribir a <a className="font-medium text-[color:var(--accent-2)]" href="mailto:support@simplohub.com">support@simplohub.com</a> o abrir una conversacion directa por <a className="font-medium text-[color:var(--accent-2)]" href={WHATSAPP_URL} rel="noreferrer" target="_blank">WhatsApp</a>.
+                  Puedes escribir a <a className="font-medium text-[color:var(--accent-2)]" href="mailto:support@simpliohub.com">support@simpliohub.com</a> o abrir una conversacion directa por <a className="font-medium text-[color:var(--accent-2)]" href={WHATSAPP_URL} rel="noreferrer" target="_blank">WhatsApp</a>.
                 </p>
                 <p>
                   Para presencia institucional y novedades del producto tambien puedes visitar el
@@ -561,7 +561,7 @@ function App() {
         <footer className="mt-4 border-t border-[color:var(--border-subtle)] px-4 py-10 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr]">
             <div>
-              <h3 className="text-sm font-semibold text-[color:var(--text-primary)]">Simplo Hub</h3>
+              <h3 className="text-sm font-semibold text-[color:var(--text-primary)]">Simplio Hub</h3>
               <p className="mt-4 max-w-sm text-sm leading-7 text-[color:var(--text-secondary)]">
                 Soluciones tecnologicas elegantes para problemas cotidianos del negocio.
               </p>
@@ -574,7 +574,7 @@ function App() {
             <FooterColumn title="Legal" items={footerLegalLinks} />
           </div>
           <div className="mt-10 flex flex-col gap-3 border-t border-[color:var(--border-subtle)] pt-6 text-xs text-[color:var(--text-secondary)] sm:flex-row sm:items-center sm:justify-between">
-            <span>© 2024 Simplo Hub. All rights reserved.</span>
+            <span>© 2024 Simplio Hub. All rights reserved.</span>
             <div className="flex gap-5">
               <a href="#cta">Solicitar demo</a>
               <a href="#ecosystem">Productos</a>
