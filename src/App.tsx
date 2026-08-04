@@ -25,6 +25,8 @@ import {
   UsersIcon,
 } from './components/landing/icons'
 import { SectionHeading } from './components/landing/section-heading'
+import { LegalPage } from './components/legal-page'
+import { compliancePolicy, privacyPolicy, securityPolicy, termsAndConditions } from './data/legal'
 
 type Theme = 'light' | 'dark'
 type FooterLinkItem = {
@@ -53,9 +55,10 @@ const footerContactLinks: FooterLinkItem[] = [
 ]
 
 const footerLegalLinks: FooterLinkItem[] = [
-  { label: 'Privacidad', href: '#privacy' },
-  { label: 'Terminos', href: '#terms' },
-  { label: 'Seguridad', href: '#security' },
+  { label: 'Privacidad', href: '/privacy' },
+  { label: 'Términos', href: '/terms' },
+  { label: 'Seguridad', href: '/security' },
+  { label: 'Cumplimiento', href: '/compliance' },
   { label: 'Soporte', href: '#support' },
 ]
 
@@ -94,12 +97,30 @@ function App() {
     window.localStorage.setItem('simplo-theme', theme)
   }, [theme])
 
+  const path = window.location.pathname.replace(/\/$/, '') || '/'
+
+  if (path === '/privacy') {
+    return <LegalPage document={privacyPolicy} />
+  }
+
+  if (path === '/terms') {
+    return <LegalPage document={termsAndConditions} />
+  }
+
+  if (path === '/security') {
+    return <LegalPage document={securityPolicy} />
+  }
+
+  if (path === '/compliance') {
+    return <LegalPage document={compliancePolicy} />
+  }
+
   return (
     <div className="min-h-screen bg-[color:var(--bg)] text-[color:var(--text-primary)]">
       <div className="mx-auto max-w-[1120px] px-4 pb-10 sm:px-6 lg:px-8">
         <header className="sticky top-0 z-40 border-b border-[color:var(--border-subtle)] bg-[color:var(--header-bg)] backdrop-blur-xl">
           <div className="mx-auto flex max-w-[1120px] items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-            <a href="#" className="text-sm font-semibold tracking-[-0.03em] text-[color:var(--text-primary)]">
+            <a href="/" className="text-sm font-semibold tracking-[-0.03em] text-[color:var(--text-primary)]">
               Simplio Hub
             </a>
 
@@ -484,61 +505,7 @@ function App() {
             </div>
           </section>
 
-          <section className="grid gap-4 lg:grid-cols-2">
-            <article id="privacy" className="panel-shell px-6 py-10 sm:px-8">
-              <SectionHeading
-                eyebrow="Legal"
-                title="Privacidad"
-                description="App Schedule opera con datos en UTC, visualizacion segun timezone y controles razonables para proteger la operacion del negocio."
-              />
-              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
-                <p>
-                  Simplio Hub procesa la informacion necesaria para operar reservas, clientes,
-                  usuarios y recordatorios dentro del flujo normal del producto.
-                </p>
-                <p>
-                  Cada empresa usuaria es responsable de la legitimidad de los datos que carga en
-                  la plataforma y de su uso conforme a la normativa aplicable.
-                </p>
-              </div>
-            </article>
-
-            <article id="terms" className="panel-shell px-6 py-10 sm:px-8">
-              <SectionHeading
-                eyebrow="Legal"
-                title="Terminos"
-                description="El uso de App Schedule debe mantenerse dentro de fines licitos, operativos y compatibles con la gestion del negocio."
-              />
-              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
-                <p>
-                  Cada cuenta es responsable de sus credenciales, configuracion interna y uso
-                  adecuado de la plataforma por parte de su equipo.
-                </p>
-                <p>
-                  Simplio Hub puede actualizar funciones, reforzar seguridad o limitar acceso en
-                  casos de abuso, riesgo operativo o incumplimiento del uso permitido.
-                </p>
-              </div>
-            </article>
-
-            <article id="security" className="panel-shell px-6 py-10 sm:px-8">
-              <SectionHeading
-                eyebrow="Operacion"
-                title="Seguridad"
-                description="La plataforma busca consistencia entre datos, agenda e interfaz sin perder trazabilidad ni control de acceso."
-              />
-              <div className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--text-secondary)]">
-                <p>
-                  El producto usa una logica de almacenamiento en UTC y renderiza segun el timezone
-                  configurado para mantener coherencia entre base de datos y calendario.
-                </p>
-                <p>
-                  Tambien se aplican medidas razonables de autenticacion, separacion por empresa y
-                  proteccion de informacion sensible en el entorno de operacion.
-                </p>
-              </div>
-            </article>
-
+          <section>
             <article id="support" className="panel-shell px-6 py-10 sm:px-8">
               <SectionHeading
                 eyebrow="Contacto"
